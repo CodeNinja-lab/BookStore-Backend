@@ -1,30 +1,65 @@
-# Backend de l'application Bookstore
+# 📚 Backend de l'application BookStore
 
-Ce projet est le backend d'une application de librairie en ligne développée avec Spring Boot. Il gère toutes les fonctionnalités liées à la gestion des livres, des utilisateurs, des commandes et des paiements.
+Ce projet constitue le **backend** de l'application de vente de livres en ligne **BookStore**, développé avec **Spring Boot**. Il fournit une API RESTful pour gérer les livres, les utilisateurs, les commandes et les paiements.
 
-## Prérequis
+---
 
-Avant de commencer, assurez-vous d'avoir installé les éléments suivants sur votre machine :
+## 🚀 Fonctionnalités principales
 
-- Java 17 ou une version supérieure
-- Une base de données SQL (MySQL, PostgreSQL, etc.)
+- 📚 Gestion des livres (CRUD)
+- 👤 Gestion des utilisateurs (inscription, authentification)
+- 🛒 Gestion du panier
+- 🧾 Traitement des commandes
+- 💳 Simulation de paiement
+- 🔐 Sécurité avec JWT (JSON Web Token)
+- 🌍 API REST bien structurée
 
-## Installation
+---
 
-1. Clonez ce dépôt sur votre machine locale :
+## 🛠️ Technologies utilisées
 
-   ```bash
-   git clone https://github.com/IbrahimaAliouneMbodj/bookstore-backend.git
+- Java 17+
+- Spring Boot
+- Spring Data JPA
+- Spring Security
+- JWT pour l’authentification
+- Hibernate
+- MySQL ou PostgreSQL (configurable)
+- Maven
 
-2. Allez dans le répertoire du projet :
+---
 
-   ```bash
-   cd bookstore-backend
+## ⚙️ Prérequis
 
-3. Modifiez les fichiers de configuration(application.properties) pour correspondre à votre base de données
+Avant de lancer l'application, assurez-vous d'avoir installé :
 
-4. Exécutez la commande suivante pour installer les dépendances et démarrer le projet :
+- Java 17 ou supérieur
+- Maven
+- Une base de données SQL (par exemple : MySQL ou PostgreSQL)
+- Un outil comme Postman pour tester l'API
 
-   ```bash
+---
+
+## 💾 Installation et exécution
+
+### 1. Cloner le dépôt
+
+```bash
+git clone https://github.com/IbrahimaAliouneMbodj/bookstore-backend.git
+cd bookstore-backend
+ 
+### Configurer la base de données
+
+Modifiez le fichier src/main/resources/application.properties
+   spring.datasource.url=jdbc:mysql://localhost:3306/bookstore
+   spring.datasource.username=your_username
+   spring.datasource.password=your_password
+
+   spring.jpa.hibernate.ddl-auto=update
+   spring.jpa.show-sql=true
+
+# JWT secret
+   jwt.secret=your_jwt_secret_key
+Lancer l'application
    mvn spring-boot:run
-   
+
